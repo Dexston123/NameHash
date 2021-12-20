@@ -1,0 +1,6 @@
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\bin\Debug\ProjectLibray.dll
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\bin\Debug\ProjectLibray.pdb
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\obj\Debug\ProjectLibray.csproj.AssemblyReference.cache
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\obj\Debug\ProjectLibray.csproj.CoreCompileInputs.cache
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\obj\Debug\ProjectLibray.dll
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\obj\Debug\ProjectLibray.pdb

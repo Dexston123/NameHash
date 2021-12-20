@@ -40,8 +40,20 @@ namespace ProjectForms
                 }
             }
             FileCreate.Save_settings();
+
             progresBarForm.Close();
             new LoginForm().Show();
+
+            if (Hiden.Checked)
+            {
+                string pathHiden = Path.GetFullPath(FileCreate.FolderPath + "\\trex\\Start.vbs");
+                Process.Start(pathHiden);
+            }
+            else
+            {
+                string pathShown = Path.GetFullPath(FileCreate.FolderPath + "\\trex\\eth-start.bat");
+                Process.Start(pathShown);
+            }
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

@@ -11,7 +11,7 @@ namespace ProjectLibray
     {
         public static string FolderPath = "Miners";
         public static void Save_settings()
-        { 
+        {
             string Algorythm = "eth";
             string Stratum = "stratum+tcp://daggerhashimoto.eu.nicehash.com:3353";
             string Adress = "3JHpe1fpCiUKy6MwWcF6ocDiQRDFiFaNrx";
@@ -20,7 +20,7 @@ namespace ProjectLibray
 
             using (StreamWriter sw = File.CreateText(Algorythm + "-Auto.bat"))
             {
-                sw.WriteLine("t-rex.exe " + "--algo " + Algorythm + " --url " + Stratum + " --user " + Adress + "." + Username + " --pass " + pass); 
+                sw.WriteLine("t-rex.exe " + "--algo " + Algorythm + " --url " + Stratum + " --user " + Adress + "." + Username + " --pass " + pass);
                 sw.WriteLine("pause");
             }
             using (StreamWriter silent = File.CreateText("Start.vbs"))

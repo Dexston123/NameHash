@@ -40,6 +40,7 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MiningButton = new System.Windows.Forms.Button();
+            this.Hiden = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -183,6 +184,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.Hiden);
             this.panel1.Controls.Add(this.MiningButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 411);
@@ -200,6 +202,16 @@
             this.MiningButton.Text = "Zacznij Kopac";
             this.MiningButton.UseVisualStyleBackColor = true;
             this.MiningButton.Click += new System.EventHandler(this.MiningButton_Click);
+            // 
+            // Hiden
+            // 
+            this.Hiden.AutoSize = true;
+            this.Hiden.Location = new System.Drawing.Point(534, 37);
+            this.Hiden.Name = "Hiden";
+            this.Hiden.Size = new System.Drawing.Size(80, 17);
+            this.Hiden.TabIndex = 2;
+            this.Hiden.Text = "checkBox1";
+            this.Hiden.UseVisualStyleBackColor = true;
             // 
             // MiningForm
             // 
@@ -219,6 +231,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -237,5 +250,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.CheckBox Hiden;
     }
 }

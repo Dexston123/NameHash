@@ -10,7 +10,7 @@ namespace ProjectLibray
     {
         public static class User
         {
-
+            //Coś
         }
     }
 }

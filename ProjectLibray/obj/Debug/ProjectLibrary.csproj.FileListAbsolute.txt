@@ -1,0 +1,9 @@
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\bin\Debug\ProjectLibray.dll
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\bin\Debug\ProjectLibray.pdb
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\obj\Debug\ProjectLibrary.csproj.AssemblyReference.cache
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\obj\Debug\ProjectLibrary.csproj.CoreCompileInputs.cache
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\obj\Debug\ProjectLibrary.csproj.CopyComplete
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\obj\Debug\ProjectLibray.dll
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectLibray\obj\Debug\ProjectLibray.pdb

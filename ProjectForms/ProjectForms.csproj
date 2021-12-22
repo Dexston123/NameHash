@@ -170,11 +170,13 @@
     <None Include="Resources\Icons\settings.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProjectLibray\ProjectLibray.csproj">
+    <ProjectReference Include="..\ProjectLibray\ProjectLibrary.csproj">
       <Project>{7f7ba59d-9d44-4756-9629-35a95d1047c0}</Project>
-      <Name>ProjectLibray</Name>
+      <Name>ProjectLibrary</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Background\czarny.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,6 @@
-﻿namespace ProjectForms
+﻿using System.Drawing;
+
+namespace ProjectForms
 {
     partial class MiningForm
     {
@@ -39,8 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.MiningButton = new System.Windows.Forms.Button();
             this.Hiden = new System.Windows.Forms.CheckBox();
+            this.MiningButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -50,7 +52,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
@@ -63,7 +65,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(858, 501);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(875, 601);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -73,7 +75,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.tableLayoutPanel2);
-            this.panel2.Location = new System.Drawing.Point(42, 113);
+            this.panel2.Location = new System.Drawing.Point(45, 163);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 275);
             this.panel2.TabIndex = 0;
@@ -111,7 +113,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.tableLayoutPanel3);
-            this.panel3.Location = new System.Drawing.Point(328, 113);
+            this.panel3.Location = new System.Drawing.Point(336, 163);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 275);
             this.panel3.TabIndex = 1;
@@ -149,7 +151,7 @@
             this.panel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.tableLayoutPanel4);
-            this.panel4.Location = new System.Drawing.Point(614, 113);
+            this.panel4.Location = new System.Drawing.Point(628, 163);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 275);
             this.panel4.TabIndex = 2;
@@ -183,25 +185,14 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.Hiden);
             this.panel1.Controls.Add(this.MiningButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 411);
+            this.panel1.Location = new System.Drawing.Point(0, 511);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(858, 90);
+            this.panel1.Size = new System.Drawing.Size(875, 90);
             this.panel1.TabIndex = 1;
-            // 
-            // MiningButton
-            // 
-            this.MiningButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MiningButton.Location = new System.Drawing.Point(328, 15);
-            this.MiningButton.Name = "MiningButton";
-            this.MiningButton.Size = new System.Drawing.Size(200, 58);
-            this.MiningButton.TabIndex = 0;
-            this.MiningButton.Text = "Zacznij Kopac";
-            this.MiningButton.UseVisualStyleBackColor = true;
-            this.MiningButton.Click += new System.EventHandler(this.MiningButton_Click);
             // 
             // Hiden
             // 
@@ -213,16 +204,30 @@
             this.Hiden.Text = "checkBox1";
             this.Hiden.UseVisualStyleBackColor = true;
             // 
+            // MiningButton
+            // 
+            this.MiningButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MiningButton.Location = new System.Drawing.Point(336, 15);
+            this.MiningButton.Name = "MiningButton";
+            this.MiningButton.Size = new System.Drawing.Size(200, 58);
+            this.MiningButton.TabIndex = 0;
+            this.MiningButton.Text = "Zacznij Kopac";
+            this.MiningButton.UseVisualStyleBackColor = true;
+            this.MiningButton.Click += new System.EventHandler(this.MiningButton_Click);
+            // 
             // MiningForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 501);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(875, 601);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MiningForm";
+            this.Opacity = 0D;
             this.Text = "MiningForm";
+            this.TransparencyKey = System.Drawing.SystemColors.ActiveCaption;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

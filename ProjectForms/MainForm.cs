@@ -14,10 +14,6 @@ namespace ProjectForms
 {
     public partial class MainForm : Form
     {
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         public MainForm()
         {
             InitializeComponent();
@@ -55,6 +51,11 @@ namespace ProjectForms
             SubForm.FormBorderStyle = FormBorderStyle.None;
             this.MainPanel.Controls.Add(SubForm);
             SubForm.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

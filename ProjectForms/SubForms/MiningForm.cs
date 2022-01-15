@@ -20,6 +20,9 @@ namespace ProjectForms
         public MiningForm()
         {
             InitializeComponent();
+            this.TransparencyKey = Color.Black;
+            this.BackColor = Color.Black;
+
         }
 
         private void MiningButton_Click(object sender, EventArgs e)

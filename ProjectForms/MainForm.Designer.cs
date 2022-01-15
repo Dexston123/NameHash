@@ -1,4 +1,6 @@
-﻿namespace ProjectForms
+﻿using System.Drawing;
+
+namespace ProjectForms
 {
     partial class MainForm
     {
@@ -33,16 +35,13 @@
             this.MiningButton = new System.Windows.Forms.Button();
             this.CalcButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.VersionLabel = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DimGray;
+            this.tableLayoutPanel1.BackColor = Color.FromArgb(125, Color.Black);
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.LogoButton, 0, 0);
@@ -117,58 +116,31 @@
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Controls.Add(this.VersionLabel);
-            this.panel1.Location = new System.Drawing.Point(125, 501);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(875, 100);
-            this.panel1.TabIndex = 1;
-            // 
-            // VersionLabel
-            // 
-            this.VersionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.VersionLabel.Location = new System.Drawing.Point(250, 40);
-            this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(127, 20);
-            this.VersionLabel.TabIndex = 0;
-            this.VersionLabel.Text = "Version 0.1.Dev";
-            this.VersionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // MainPanel
             // 
             this.MainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.MainPanel.BackColor = System.Drawing.Color.Transparent;
             this.MainPanel.Location = new System.Drawing.Point(125, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(875, 501);
+            this.MainPanel.Size = new System.Drawing.Size(875, 601);
             this.MainPanel.TabIndex = 2;
-            this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BackgroundImage = global::ProjectForms.Properties.Resources.czarny;
             this.ClientSize = new System.Drawing.Size(984, 601);
             this.Controls.Add(this.MainPanel);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(1000, 640);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -176,12 +148,10 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button LogoButton;
         private System.Windows.Forms.Button MiningButton;
         private System.Windows.Forms.Button CalcButton;
         private System.Windows.Forms.Button SettingsButton;
-        private System.Windows.Forms.Label VersionLabel;
         private System.Windows.Forms.Panel MainPanel;
     }
 }

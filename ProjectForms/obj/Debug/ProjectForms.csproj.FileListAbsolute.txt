@@ -17,8 +17,8 @@ C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectForms\obj\Debug\ProjectForms.c
 C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectForms\obj\Debug\ProjectForms.SettingsForm.resources
 C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectForms\obj\Debug\ProjectForms.WelcomeForm.resources
 C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectForms\obj\Debug\ProjectForms.LogoForm.resources
-C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectForms\obj\Debug\ProjectForms.General.resources
 C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectForms\obj\Debug\ProjectForms.LoginForm.resources
 C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectForms\obj\Debug\ProjectForms.ProgressBarForm.resources
 C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectForms\bin\Debug\Newtonsoft.Json.dll
 C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectForms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lambo\Desktop\Projekt\InsrertHash\ProjectForms\obj\Debug\ProjectForms.SubForms.SettingsSubForms.ApplicationSettingsForm.resources

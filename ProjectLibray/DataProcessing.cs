@@ -21,28 +21,29 @@ namespace ProjectLibray
         private static object DeserializeUserData()
         {
             string dataSerialized = File.ReadAllText(GetPath("UserData.json"));
-            UserModel convertedData = JsonConvert.DeserializeObject<UserModel>(dataSerialized);
-            return convertedData;
+            UserModel convertedUserData = JsonConvert.DeserializeObject<UserModel>(dataSerialized);
+            return convertedUserData;
+        }
+
+        private static object DeserializeSettingsData()
+        {
+            string dataSerialized = File.ReadAllText(GetPath("AppSettings.json"));
+            SettingsModel convertedSettingsData = JsonConvert.DeserializeObject<SettingsModel>(dataSerialized);
+            return convertedSettingsData;
         }
 
         private static void SerializeUserData(object data)
         { 
-            string convertedData = JsonConvert.SerializeObject(data);
-            File.WriteAllText(GetPath("UserData.json"), convertedData);
+            string convertedUserData = JsonConvert.SerializeObject(data);
+            File.WriteAllText(GetPath("UserData.json"), convertedUserData);
         }
 
-        public static string GetUsername()
+        private static void SerializeSettingsData(object data)
         {
-            UserModel data = (UserModel)DeserializeUserData();
-            return data.Username;
+            string convertedSettingsData = JsonConvert.SerializeObject(data);
+            File.WriteAllText(GetPath("AppSettings.json"), convertedSettingsData);
         }
-
-        public static void SetUsername(string address)
-        {
-            UserModel data = (UserModel)DeserializeUserData();
-            data.Address = address;
-            SerializeUserData(data);
-        }
+        //User Data
 
         public static string GetAddress()
         {
@@ -67,6 +68,19 @@ namespace ProjectLibray
         {
             UserModel data = (UserModel)DeserializeUserData();
             data.Algorythm = algorythm;
+            SerializeUserData(data);
+        }
+
+        public static string GetCoin()
+        {
+            UserModel data = (UserModel)DeserializeUserData();
+            return data.Coin;
+        }
+
+        public static void SetCoin(string Coin)
+        {
+            UserModel data = (UserModel)DeserializeUserData();
+            data.Coin = Coin;
             SerializeUserData(data);
         }
 
@@ -107,6 +121,85 @@ namespace ProjectLibray
             UserModel data = (UserModel)DeserializeUserData();
             data.Pass = pass;
             SerializeUserData(data);
+        }
+
+        //Application Settings
+
+        public static string GetUsername()
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            return data.Username;
+        }
+
+        public static void SetUsername(string username)
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            data.Username = username;
+            SerializeUserData(data);
+        }
+
+        public static string GetTheme()
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            return data.Theme;
+        }
+
+        public static void SetTheme(string Theme)
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            data.Theme = Theme;
+            SerializeSettingsData(data);
+        }
+
+        public static string GetLanguage()
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            return data.Language;
+        }
+
+        public static void SetLanguage(string Language)
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            data.Language = Language;
+            SerializeSettingsData(data);
+        }
+
+        public static string GetCurrency()
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            return data.Currency;
+        }
+
+        public static void SetCurrency(string Currency)
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            data.Currency = Currency;
+            SerializeSettingsData(data);
+        }
+        public static string GetWorkType()
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            return data.WorkType;
+        }
+
+        public static void SetWorkType(string WorkType)
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            data.WorkType = WorkType;
+            SerializeSettingsData(data);
+        }
+
+        public static string GetIsVisible()
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            return data.IsVisible;
+        }
+
+        public static void SetIsVisible(string IsVisible)
+        {
+            SettingsModel data = (SettingsModel)DeserializeSettingsData();
+            data.IsVisible = IsVisible;
+            SerializeSettingsData(data);
         }
     }
 }

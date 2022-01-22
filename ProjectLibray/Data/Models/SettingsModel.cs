@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace ProjectLibray.Data.Models
 {
-    internal class SettingsModel
+    public class SettingsModel
     {
+        public string Username { get; set; }
+        public string Theme { get; set; }
+        public string Language { get; set; }
+        public string Currency { get; set; }
+        public string WorkType { get; set; }
+        public string IsVisible { get; set; }
+
     }
 }

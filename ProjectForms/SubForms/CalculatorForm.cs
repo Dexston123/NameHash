@@ -25,6 +25,7 @@ namespace ProjectForms
 
         private void Calculate_Click(object sender, EventArgs e)
         {
+            
             int hashrate = int.Parse(TextBoxHashrate.Text);
             WebClient client = new WebClient();
 

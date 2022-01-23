@@ -120,9 +120,13 @@ namespace ProjectForms
             // SaveSettingsButton
             // 
             this.SaveSettingsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SaveSettingsButton.Location = new System.Drawing.Point(400, 33);
+            this.SaveSettingsButton.BackgroundImage = global::ProjectForms.Properties.Resources.przycisk_Czarny;
+            this.SaveSettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SaveSettingsButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SaveSettingsButton.ForeColor = System.Drawing.Color.White;
+            this.SaveSettingsButton.Location = new System.Drawing.Point(374, 25);
             this.SaveSettingsButton.Name = "SaveSettingsButton";
-            this.SaveSettingsButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveSettingsButton.Size = new System.Drawing.Size(126, 40);
             this.SaveSettingsButton.TabIndex = 0;
             this.SaveSettingsButton.Text = "button1";
             this.SaveSettingsButton.UseVisualStyleBackColor = true;
@@ -242,10 +246,6 @@ namespace ProjectForms
             this.AlgorythmComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AlgorythmComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AlgorythmComboBox.FormattingEnabled = true;
-            this.AlgorythmComboBox.Location = new System.Drawing.Point(258, 22);
-            this.AlgorythmComboBox.Name = "AlgorythmComboBox";
-            this.AlgorythmComboBox.Size = new System.Drawing.Size(121, 21);
-            this.AlgorythmComboBox.TabIndex = 2;
             this.AlgorythmComboBox.Items.AddRange(new object[] {
             "autolykos2",
             "etchash",
@@ -261,6 +261,10 @@ namespace ProjectForms
             "progpow-veriblock",
             "progpowz",
             "tensority"});
+            this.AlgorythmComboBox.Location = new System.Drawing.Point(258, 22);
+            this.AlgorythmComboBox.Name = "AlgorythmComboBox";
+            this.AlgorythmComboBox.Size = new System.Drawing.Size(121, 21);
+            this.AlgorythmComboBox.TabIndex = 2;
             // 
             // OptionLabel2
             // 
@@ -292,13 +296,13 @@ namespace ProjectForms
             this.CoinComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CoinComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CoinComboBox.FormattingEnabled = true;
+            this.CoinComboBox.Items.AddRange(new object[] {
+            "ETH",
+            "BTC"});
             this.CoinComboBox.Location = new System.Drawing.Point(258, 22);
             this.CoinComboBox.Name = "CoinComboBox";
             this.CoinComboBox.Size = new System.Drawing.Size(121, 21);
             this.CoinComboBox.TabIndex = 2;
-            this.CoinComboBox.Items.AddRange(new object[] {
-            "ETH",
-            "BTC"});
             // 
             // OptionLabel3
             // 
@@ -481,13 +485,13 @@ namespace ProjectForms
             this.ThemeComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ThemeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ThemeComboBox.FormattingEnabled = true;
+            this.ThemeComboBox.Items.AddRange(new object[] {
+            "Black",
+            "White"});
             this.ThemeComboBox.Location = new System.Drawing.Point(259, 22);
             this.ThemeComboBox.Name = "ThemeComboBox";
             this.ThemeComboBox.Size = new System.Drawing.Size(121, 21);
             this.ThemeComboBox.TabIndex = 2;
-            this.ThemeComboBox.Items.AddRange(new object[] {
-            "Black",
-            "White"});
             // 
             // OptionLabel8
             // 
@@ -518,14 +522,14 @@ namespace ProjectForms
             this.LanguageComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LanguageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LanguageComboBox.FormattingEnabled = true;
-            this.LanguageComboBox.Location = new System.Drawing.Point(259, 22);
-            this.LanguageComboBox.Name = "LanguageComboBox";
-            this.LanguageComboBox.Size = new System.Drawing.Size(121, 21);
-            this.LanguageComboBox.TabIndex = 2;
             this.LanguageComboBox.Items.AddRange(new object[] {
             "English",
             "Polish",
             "Afghan"});
+            this.LanguageComboBox.Location = new System.Drawing.Point(259, 22);
+            this.LanguageComboBox.Name = "LanguageComboBox";
+            this.LanguageComboBox.Size = new System.Drawing.Size(121, 21);
+            this.LanguageComboBox.TabIndex = 2;
             // 
             // OptionLabel9
             // 
@@ -556,14 +560,14 @@ namespace ProjectForms
             this.CurrencyComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CurrencyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CurrencyComboBox.FormattingEnabled = true;
-            this.CurrencyComboBox.Location = new System.Drawing.Point(259, 22);
-            this.CurrencyComboBox.Name = "CurrencyComboBox";
-            this.CurrencyComboBox.Size = new System.Drawing.Size(121, 21);
-            this.CurrencyComboBox.TabIndex = 2;
             this.CurrencyComboBox.Items.AddRange(new object[] {
             "PLN",
             "USD",
             "EUR"});
+            this.CurrencyComboBox.Location = new System.Drawing.Point(259, 22);
+            this.CurrencyComboBox.Name = "CurrencyComboBox";
+            this.CurrencyComboBox.Size = new System.Drawing.Size(121, 21);
+            this.CurrencyComboBox.TabIndex = 2;
             // 
             // OptionLabel10
             // 
@@ -594,14 +598,14 @@ namespace ProjectForms
             this.WorkTypeComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.WorkTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.WorkTypeComboBox.FormattingEnabled = true;
-            this.WorkTypeComboBox.Location = new System.Drawing.Point(259, 22);
-            this.WorkTypeComboBox.Name = "WorkTypeComboBox";
-            this.WorkTypeComboBox.Size = new System.Drawing.Size(121, 21);
-            this.WorkTypeComboBox.TabIndex = 2;
             this.WorkTypeComboBox.Items.AddRange(new object[] {
             "Efficient",
             "Gaming",
             "Max Earnings"});
+            this.WorkTypeComboBox.Location = new System.Drawing.Point(259, 22);
+            this.WorkTypeComboBox.Name = "WorkTypeComboBox";
+            this.WorkTypeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.WorkTypeComboBox.TabIndex = 2;
             // 
             // OptionLabel11
             // 
@@ -632,13 +636,13 @@ namespace ProjectForms
             this.IsVisibleComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.IsVisibleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.IsVisibleComboBox.FormattingEnabled = true;
+            this.IsVisibleComboBox.Items.AddRange(new object[] {
+            "Visible",
+            "Not Visible"});
             this.IsVisibleComboBox.Location = new System.Drawing.Point(259, 24);
             this.IsVisibleComboBox.Name = "IsVisibleComboBox";
             this.IsVisibleComboBox.Size = new System.Drawing.Size(121, 21);
             this.IsVisibleComboBox.TabIndex = 2;
-            this.IsVisibleComboBox.Items.AddRange(new object[] {
-            "Visible",
-            "Not Visible" });
             // 
             // OptionLabel12
             // 

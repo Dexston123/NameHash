@@ -34,12 +34,6 @@ namespace ProjectForms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ApplicationSettingsForm applicationSettingsForm = new ApplicationSettingsForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            OpenSubForm(applicationSettingsForm);
-        }
-
         private void OpenSubForm(Form SubForm)
         {
             this.SettingsPanel.Controls.Clear();
@@ -73,6 +67,7 @@ namespace ProjectForms
             string WorkType = (string) WorkTypeComboBox.SelectedItem;
             string ConsoleVisibility = (string) IsVisibleComboBox.SelectedItem;
             
+            //Zmienić to na jedną funkcje zapisu
             DataProcessing.SetAddress(Address);
             DataProcessing.SetAlgorythm(Algorythm);
             DataProcessing.SetCoin(Coin);
@@ -85,6 +80,24 @@ namespace ProjectForms
             DataProcessing.SetCurrency(Currency);
             DataProcessing.SetWorkType(WorkType);
             DataProcessing.SetIsVisible(ConsoleVisibility);
+            /*DataProcessing.SetTrexUser(Address);
+            DataProcessing.SetTrexAlgorythm(Algorythm);
+            DataProcessing.SetTrexCoin(Coin);
+            DataProcessing.SetTrexStratum(Stratum);
+            DataProcessing.SetTrexRigName(RigName);
+            DataProcessing.SetTrexPass(Pass);*/
+        }
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            ResetSettingsAlert resetAlert = new ResetSettingsAlert();
+            resetAlert.ShowDialog();
+        }
+
+        private void AdvancedSettingsButton_Click(object sender, EventArgs e)
+        {
+            AdvancedSettingsAlert advancedAlert = new AdvancedSettingsAlert();
+            advancedAlert.ShowDialog();
         }
     }
 }

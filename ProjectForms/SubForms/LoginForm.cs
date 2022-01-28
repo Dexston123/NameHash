@@ -25,7 +25,7 @@ namespace ProjectForms
 
         private void ActivateAppButton_Click(object sender, EventArgs e)
         {
-            string address = UsersAdress.Text;
+            /*string address = UsersAdress.Text;
             DataProcessing.SetAddress(address);
             this.Close();
 

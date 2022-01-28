@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression.FileSystem" />
@@ -64,12 +67,6 @@
     </Compile>
     <Compile Include="SubForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubForms\SettingsSubForms\ApplicationSettingsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubForms\SettingsSubForms\ApplicationSettingsForm.Designer.cs">
-      <DependentUpon>ApplicationSettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SubForms\CalculatorForm.cs">
       <SubType>Form</SubType>
@@ -103,6 +100,24 @@
     <Compile Include="SubForms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForms\SettingsSubForms\AdvancedSettingsAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SettingsSubForms\AdvancedSettingsAlert.Designer.cs">
+      <DependentUpon>AdvancedSettingsAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SettingsSubForms\AdvancedSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SettingsSubForms\AdvancedSettingsForm.Designer.cs">
+      <DependentUpon>AdvancedSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SettingsSubForms\ResetSettingsAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SettingsSubForms\ResetSettingsAlert.Designer.cs">
+      <DependentUpon>ResetSettingsAlert.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForms\WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,9 +129,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubForms\SettingsSubForms\ApplicationSettingsForm.resx">
-      <DependentUpon>ApplicationSettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForms\CalculatorForm.resx">
       <DependentUpon>CalculatorForm.cs</DependentUpon>
@@ -142,6 +154,15 @@
     </Compile>
     <EmbeddedResource Include="SubForms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SettingsSubForms\AdvancedSettingsAlert.resx">
+      <DependentUpon>AdvancedSettingsAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SettingsSubForms\AdvancedSettingsForm.resx">
+      <DependentUpon>AdvancedSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SettingsSubForms\ResetSettingsAlert.resx">
+      <DependentUpon>ResetSettingsAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForms\WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
@@ -177,6 +198,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Background\czarny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel CPU Czarny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel CPU Idiota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel GPU Czarny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel GPU Idiota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel Zarobki Czarny 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel Zarobki Idiota 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel Kalkulator Czarny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel Kalkulator Idiota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel Pionowy CPU Czarny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel Pionowy CPU Idiota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel Pionowy GPU Czarny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel Pionowy GPU Idiota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel Pionowy Zarobki Czarny 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panels\Panel Pionowy Zarobki Idiota 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buttons\przycisk Czarny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buttons\przycisk Idiota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background\idiota biały.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FFFFFF.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FFFFFF1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

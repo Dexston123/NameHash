@@ -13,44 +13,75 @@ using ProjectLibray;
 namespace ProjectForms
 {
     public partial class MainForm : Form
-    {
-        public MainForm()
+    {   
+        static public class Forms
         {
+            static public WelcomeForm welcomeForm = new WelcomeForm() { Dock = DockStyle.Fill, TopLevel = false};
+            static public MiningForm miningForm = new MiningForm() { Dock = DockStyle.Fill, TopLevel = false};
+            static public CalculatorForm calcForm = new CalculatorForm() { Dock = DockStyle.Fill, TopLevel = false};
+            static public SettingsForm settingsForm = new SettingsForm() { Dock = DockStyle.Fill, TopLevel = false};
+            static public LogoForm logoForm = new LogoForm() { Dock = DockStyle.Fill, TopLevel = false};
+        }
+        public MainForm()
+        { 
             InitializeComponent();
-            WelcomeForm welcomeForm = new WelcomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            OpenSubForm(welcomeForm);
+            
+            try
+            {
+                FormHelper.OpenSubForm(Forms.welcomeForm, this.MainPanel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Something went wrong try again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void MiningButton_Click(object sender, EventArgs e)
         {
-            MiningForm miningForm = new MiningForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            OpenSubForm(miningForm);
+            try
+            {
+                FormHelper.OpenSubForm(Forms.miningForm, this.MainPanel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Something went wrong try again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CalcButton_Click(object sender, EventArgs e)
         {
-            CalculatorForm calcForm = new CalculatorForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            OpenSubForm(calcForm);
+            try
+            {
+                FormHelper.OpenSubForm(Forms.calcForm, this.MainPanel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Something went wrong try again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         
         private void SettingsButton_Click(object sender, EventArgs e)
-        {
-            SettingsForm settingsForm = new SettingsForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            OpenSubForm(settingsForm);
+        { 
+            try
+            {
+                FormHelper.OpenSubForm(Forms.settingsForm, this.MainPanel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Something went wrong try again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void LogoButton_Click(object sender, EventArgs e)
         {
-            LogoForm logoForm = new LogoForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            OpenSubForm(logoForm);
-        }
-
-        private void OpenSubForm(Form SubForm)
-        {
-            this.MainPanel.Controls.Clear();
-            SubForm.FormBorderStyle = FormBorderStyle.None;
-            this.MainPanel.Controls.Add(SubForm);
-            SubForm.Show();
+            try
+            {
+                FormHelper.OpenSubForm(Forms.logoForm, this.MainPanel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Something went wrong try again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)

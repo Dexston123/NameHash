@@ -1,1 +1,8 @@
-{"Username":"u","Theme":"White","Language":"Afghan","Currency":"USD","WorkType":"Gaming","IsVisible":"Visible"}
+{
+  "Address": "3DLhdwjsB1SnR6McVeVM9KJjGf8StxEi6w.Komp",
+  "Algorythm": "ethash",
+  "Coin": "ethereum",
+  "Pass": "x",
+  "RigName": "PC",
+  "Stratum": "stratum+tcp://daggerhashimoto.eu.nicehash.com:3353"
+}

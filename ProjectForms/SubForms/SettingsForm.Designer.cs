@@ -30,8 +30,11 @@ namespace ProjectForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.SettingsPanel = new System.Windows.Forms.Panel();
             this.ButtonLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.AdvancedSettingsButton = new System.Windows.Forms.Button();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.SaveSettingsButton = new System.Windows.Forms.Button();
             this.SettingsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.HeaderLabel1 = new System.Windows.Forms.Label();
@@ -95,6 +98,7 @@ namespace ProjectForms
             // 
             // SettingsPanel
             // 
+            this.SettingsPanel.AutoSize = true;
             this.SettingsPanel.BackColor = System.Drawing.SystemColors.HighlightText;
             this.SettingsPanel.Controls.Add(this.ButtonLayoutPanel);
             this.SettingsPanel.Controls.Add(this.SettingsLayoutPanel);
@@ -107,28 +111,63 @@ namespace ProjectForms
             // 
             // ButtonLayoutPanel
             // 
-            this.ButtonLayoutPanel.ColumnCount = 1;
-            this.ButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ButtonLayoutPanel.ColumnCount = 3;
+            this.ButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ButtonLayoutPanel.Controls.Add(this.AdvancedSettingsButton, 0, 0);
+            this.ButtonLayoutPanel.Controls.Add(this.ResetButton, 0, 0);
             this.ButtonLayoutPanel.Controls.Add(this.SaveSettingsButton, 0, 0);
+            this.ButtonLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ButtonLayoutPanel.Location = new System.Drawing.Point(0, 511);
             this.ButtonLayoutPanel.Name = "ButtonLayoutPanel";
             this.ButtonLayoutPanel.RowCount = 1;
-            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.ButtonLayoutPanel.Size = new System.Drawing.Size(875, 90);
             this.ButtonLayoutPanel.TabIndex = 1;
+            // 
+            // AdvancedSettingsButton
+            // 
+            this.AdvancedSettingsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AdvancedSettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdvancedSettingsButton.BackgroundImage")));
+            this.AdvancedSettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AdvancedSettingsButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AdvancedSettingsButton.ForeColor = System.Drawing.Color.White;
+            this.AdvancedSettingsButton.Location = new System.Drawing.Point(665, 25);
+            this.AdvancedSettingsButton.Name = "AdvancedSettingsButton";
+            this.AdvancedSettingsButton.Size = new System.Drawing.Size(126, 40);
+            this.AdvancedSettingsButton.TabIndex = 2;
+            this.AdvancedSettingsButton.Text = "Advanced Settings";
+            this.AdvancedSettingsButton.UseVisualStyleBackColor = true;
+            this.AdvancedSettingsButton.Click += new System.EventHandler(this.AdvancedSettingsButton_Click);
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ResetButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ResetButton.BackgroundImage")));
+            this.ResetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ResetButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ResetButton.ForeColor = System.Drawing.Color.White;
+            this.ResetButton.Location = new System.Drawing.Point(373, 25);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(126, 40);
+            this.ResetButton.TabIndex = 1;
+            this.ResetButton.Text = "Set To Default";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // SaveSettingsButton
             // 
             this.SaveSettingsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SaveSettingsButton.BackgroundImage = global::ProjectForms.Properties.Resources.przycisk_Czarny;
+            this.SaveSettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SaveSettingsButton.BackgroundImage")));
             this.SaveSettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SaveSettingsButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.SaveSettingsButton.ForeColor = System.Drawing.Color.White;
-            this.SaveSettingsButton.Location = new System.Drawing.Point(374, 25);
+            this.SaveSettingsButton.Location = new System.Drawing.Point(82, 25);
             this.SaveSettingsButton.Name = "SaveSettingsButton";
             this.SaveSettingsButton.Size = new System.Drawing.Size(126, 40);
             this.SaveSettingsButton.TabIndex = 0;
-            this.SaveSettingsButton.Text = "button1";
+            this.SaveSettingsButton.Text = "Save Settings";
             this.SaveSettingsButton.UseVisualStyleBackColor = true;
             this.SaveSettingsButton.Click += new System.EventHandler(this.SaveSettingsButton_Click);
             // 
@@ -141,20 +180,21 @@ namespace ProjectForms
             this.SettingsLayoutPanel.Controls.Add(this.HeaderLabel2, 1, 0);
             this.SettingsLayoutPanel.Controls.Add(this.ListLayoutPanel1, 0, 1);
             this.SettingsLayoutPanel.Controls.Add(this.ListLayoutPanel2, 1, 1);
+            this.SettingsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SettingsLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.SettingsLayoutPanel.Name = "SettingsLayoutPanel";
             this.SettingsLayoutPanel.RowCount = 2;
             this.SettingsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.SettingsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.SettingsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.SettingsLayoutPanel.Size = new System.Drawing.Size(875, 514);
+            this.SettingsLayoutPanel.Size = new System.Drawing.Size(875, 601);
             this.SettingsLayoutPanel.TabIndex = 0;
             // 
             // HeaderLabel1
             // 
             this.HeaderLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HeaderLabel1.AutoSize = true;
-            this.HeaderLabel1.Location = new System.Drawing.Point(189, 32);
+            this.HeaderLabel1.Location = new System.Drawing.Point(189, 38);
             this.HeaderLabel1.Name = "HeaderLabel1";
             this.HeaderLabel1.Size = new System.Drawing.Size(59, 13);
             this.HeaderLabel1.TabIndex = 0;
@@ -164,7 +204,7 @@ namespace ProjectForms
             // 
             this.HeaderLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HeaderLabel2.AutoSize = true;
-            this.HeaderLabel2.Location = new System.Drawing.Point(626, 32);
+            this.HeaderLabel2.Location = new System.Drawing.Point(626, 38);
             this.HeaderLabel2.Name = "HeaderLabel2";
             this.HeaderLabel2.Size = new System.Drawing.Size(59, 13);
             this.HeaderLabel2.TabIndex = 1;
@@ -180,7 +220,7 @@ namespace ProjectForms
             this.ListLayoutPanel1.Controls.Add(this.OptionTableLayoutPanel4, 0, 3);
             this.ListLayoutPanel1.Controls.Add(this.OptionTableLayoutPanel5, 0, 4);
             this.ListLayoutPanel1.Controls.Add(this.OptionTableLayoutPanel6, 0, 5);
-            this.ListLayoutPanel1.Location = new System.Drawing.Point(3, 80);
+            this.ListLayoutPanel1.Location = new System.Drawing.Point(3, 93);
             this.ListLayoutPanel1.Name = "ListLayoutPanel1";
             this.ListLayoutPanel1.RowCount = 6;
             this.ListLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -420,7 +460,7 @@ namespace ProjectForms
             this.ListLayoutPanel2.Controls.Add(this.OptionTableLayoutPanel10, 0, 3);
             this.ListLayoutPanel2.Controls.Add(this.OptionTableLayoutPanel11, 0, 4);
             this.ListLayoutPanel2.Controls.Add(this.OptionTableLayoutPanel12, 0, 5);
-            this.ListLayoutPanel2.Location = new System.Drawing.Point(440, 80);
+            this.ListLayoutPanel2.Location = new System.Drawing.Point(440, 93);
             this.ListLayoutPanel2.Name = "ListLayoutPanel2";
             this.ListLayoutPanel2.RowCount = 6;
             this.ListLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -695,6 +735,7 @@ namespace ProjectForms
             this.OptionTableLayoutPanel12.ResumeLayout(false);
             this.OptionTableLayoutPanel12.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -743,5 +784,7 @@ namespace ProjectForms
         private System.Windows.Forms.TextBox RigNameTextBox;
         private System.Windows.Forms.TextBox PassTextBox;
         private System.Windows.Forms.TextBox UsernameTextBox;
+        private System.Windows.Forms.Button ResetButton;
+        private System.Windows.Forms.Button AdvancedSettingsButton;
     }
 }

@@ -30,6 +30,7 @@ namespace ProjectForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LogoButton = new System.Windows.Forms.Button();
             this.MiningButton = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@ namespace ProjectForms
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = Color.FromArgb(125, Color.Black);
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.LogoButton, 0, 0);
@@ -76,10 +77,11 @@ namespace ProjectForms
             // 
             this.MiningButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MiningButton.BackColor = System.Drawing.Color.Transparent;
+            this.MiningButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MiningButton.BackgroundImage")));
+            this.MiningButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MiningButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MiningButton.FlatAppearance.BorderSize = 0;
             this.MiningButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MiningButton.Image = global::ProjectForms.Properties.Resources.mining;
             this.MiningButton.Location = new System.Drawing.Point(25, 142);
             this.MiningButton.Name = "MiningButton";
             this.MiningButton.Size = new System.Drawing.Size(75, 75);
@@ -91,10 +93,11 @@ namespace ProjectForms
             // 
             this.CalcButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CalcButton.BackColor = System.Drawing.Color.Transparent;
+            this.CalcButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CalcButton.BackgroundImage")));
+            this.CalcButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CalcButton.FlatAppearance.BorderSize = 0;
             this.CalcButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalcButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CalcButton.Image = global::ProjectForms.Properties.Resources.calculator;
             this.CalcButton.Location = new System.Drawing.Point(25, 262);
             this.CalcButton.Name = "CalcButton";
             this.CalcButton.Size = new System.Drawing.Size(75, 75);
@@ -106,9 +109,10 @@ namespace ProjectForms
             // 
             this.SettingsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
+            this.SettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsButton.BackgroundImage")));
+            this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SettingsButton.FlatAppearance.BorderSize = 0;
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingsButton.Image = global::ProjectForms.Properties.Resources.settings;
             this.SettingsButton.Location = new System.Drawing.Point(25, 382);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(75, 75);
@@ -122,6 +126,8 @@ namespace ProjectForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.MainPanel.Location = new System.Drawing.Point(125, 0);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(875, 601);
@@ -132,10 +138,12 @@ namespace ProjectForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.BackgroundImage = global::ProjectForms.Properties.Resources.czarny;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 601);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(1000, 640);
             this.Name = "MainForm";
             this.Text = "MainForm";

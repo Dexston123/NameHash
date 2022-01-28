@@ -17,7 +17,14 @@ namespace ProjectLibray
             path = path.Remove(path.Length - 15) + "Libray\\Data\\" + file;
             return path;
         }
-
+        /*private static string GetTrexPath(string file)
+        {
+            //Dac tu ścieszke do configu trexa
+            string path = Path.Combine(Environment.CurrentDirectory);
+            path = path.Remove(path.Length - 15) + "Libray\\Data\\" + file;
+            return path;
+        }*/
+        //Deserialize
         private static object DeserializeUserData()
         {
             string dataSerialized = File.ReadAllText(GetPath("UserData.json"));
@@ -31,7 +38,13 @@ namespace ProjectLibray
             SettingsModel convertedSettingsData = JsonConvert.DeserializeObject<SettingsModel>(dataSerialized);
             return convertedSettingsData;
         }
-
+        /*private static object DeserializeTrexData()
+        {
+            string dataSerialized = File.ReadAllText(GetTrexPath("Config.json"));
+            MinerConfigModel convertedTrexData = JsonConvert.DeserializeObject<MinerConfigModel>(dataSerialized);
+            return convertedTrexData;
+        }*/
+        //Serialize
         private static void SerializeUserData(object data)
         { 
             string convertedUserData = JsonConvert.SerializeObject(data);
@@ -43,6 +56,11 @@ namespace ProjectLibray
             string convertedSettingsData = JsonConvert.SerializeObject(data);
             File.WriteAllText(GetPath("AppSettings.json"), convertedSettingsData);
         }
+        /*private static void SerializeTrexData(object data)
+        {
+            string convertedTrexData = JsonConvert.SerializeObject(data);
+            File.WriteAllText(GetTrexPath("Config.json"), convertedTrexData);
+        }*/
         //User Data
 
         public static string GetAddress()
@@ -135,7 +153,7 @@ namespace ProjectLibray
         {
             SettingsModel data = (SettingsModel)DeserializeSettingsData();
             data.Username = username;
-            SerializeUserData(data);
+            SerializeSettingsData(data);
         }
 
         public static string GetTheme()
@@ -201,6 +219,50 @@ namespace ProjectLibray
             data.IsVisible = IsVisible;
             SerializeSettingsData(data);
         }
+        //Trex Config
+        /*public static void SetTrexUser(string User)
+        {
+            MinerConfigModel data = (MinerConfigModel)DeserializeTrexData();
+            data.pool.user = User;
+            SerializeTrexData(data);
+        }
+        public static void SetTrexAlgorythm(string Algo)
+        {
+            MinerConfigModel data = (MinerConfigModel)DeserializeTrexData();
+            data.algo = Algo;
+            SerializeTrexData(data);
+        }
+        public static void SetTrexCoin(string Coin)
+        {
+            MinerConfigModel data = (MinerConfigModel)DeserializeTrexData();
+            data.coin = Coin;
+            SerializeTrexData(data);
+        }
+        public static void SetTrexStratum(string Stratum)
+        {
+            MinerConfigModel data = (MinerConfigModel)DeserializeTrexData();
+            data.pool.url = Stratum;
+            SerializeTrexData(data);
+        }
+        public static void SetTrexRigName(string RigName)
+        {
+            MinerConfigModel data = (MinerConfigModel)DeserializeTrexData();
+            data.pool.worker = RigName;
+            SerializeTrexData(data);
+        }
+        public static void SetTrexPass(string Pass)
+        {
+            MinerConfigModel data = (MinerConfigModel)DeserializeTrexData();
+            data.pool.pass = Pass;
+            SerializeTrexData(data);
+        }
+        public static void SetTrexApi()
+        {
+            MinerConfigModel data = (MinerConfigModel)DeserializeTrexData();
+            //data.apibindhttp = GetApi();
+            SerializeTrexData(data);
+        }
+        */
     }
 }
 

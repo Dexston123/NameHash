@@ -118,49 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Panel Pionowy Zarobki Czarny 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Panels\Panel Pionowy Zarobki Czarny 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Panel Pionowy CPU Czarny" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Panels\Panel Pionowy CPU Czarny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Panel Pionowy GPU Idiota" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Panels\Panel Pionowy GPU Idiota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="przycisk Czarny" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Buttons\przycisk Czarny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Panel Kalkulator Idiota" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Panels\Panel Kalkulator Idiota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Panel Kalkulator Czarny" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Panels\Panel Kalkulator Czarny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mining" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\mining.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="calculator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\calculator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Panel Pionowy Zarobki Idiota 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Panels\Panel Pionowy Zarobki Idiota 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Panel Pionowy CPU Idiota" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Panels\Panel Pionowy CPU Idiota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="przycisk Idiota" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Buttons\przycisk Idiota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Panel Pionowy GPU Czarny" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Panels\Panel Pionowy GPU Czarny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="czarny" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background\czarny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="idiota biały" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background\idiota biały.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maxresdefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maxresdefault.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

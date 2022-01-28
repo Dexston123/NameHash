@@ -107,6 +107,7 @@
             // 
             // CBCoins
             // 
+            this.CBCoins.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBCoins.FormattingEnabled = true;
             this.CBCoins.Items.AddRange(new object[] {
             "Ethereum",

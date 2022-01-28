@@ -25,18 +25,31 @@ namespace ProjectForms
 
         private void MiningButton_Click(object sender, EventArgs e)
         {
-            new LoginForm().Show();
+            //new LoginForm().Show();
 
-            /*if (Hiden.Checked)
-            {
-                string pathHiden = Path.GetFullPath(FileCreate.FolderPath + "\\trex\\Start.vbs");
-                Process.Start(pathHiden);
-            }
-            else
-            {
-                string pathShown = Path.GetFullPath(FileCreate.FolderPath + "\\trex\\eth-start.bat");
-                Process.Start(pathShown);
-            }*/
+            string miningArguments = "-a " + DataProcessing.GetAlgorythm() + " -o " + DataProcessing.GetStratum() + " -u " + DataProcessing.GetAddress() + " -p " + DataProcessing.GetPass() + " --api-bind-http 127.0.0.1:8008";
+
+            Process.Start("\\trex\\t-rex.exe", miningArguments);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.GpuModelLabelInfo.Text = TrexConnection.GetTrexModel().gpus[0].Name;
+            this.GpuVendorLabelInfo.Text = TrexConnection.GetTrexModel().gpus[0].Vendor;
+            this.TempLabelInfo.Text = TrexConnection.GetTrexModel().gpus[0].Temperature + "°C";
+            this.PowerLabelInfo.Text = TrexConnection.GetTrexModel().gpus[0].Power + "W";
+            this.FanSpeedLabelInfo.Text = TrexConnection.GetTrexModel().gpus[0].Fan_speed + "%";
+            this.EfficiencyLabelInfo.Text = TrexConnection.GetTrexModel().gpus[0].Efficiency;
+            //Mining
+            this.TrexLabelInfo.Text = TrexConnection.GetTrexModel().Name + " " + TrexConnection.GetTrexModel().Version;
+            this.AlgorythmLabelInfo.Text = TrexConnection.GetTrexModel().Algorithm;
+            TimeSpan time = TimeSpan.FromSeconds(int.Parse(TrexConnection.GetTrexModel().UpTime));
+            this.UpTimeLabelInfo.Text = time.Hours + "h " + time.Minutes + "min";
+            this.HashRateLabelInfo.Text = Math.Round(((decimal) int.Parse(TrexConnection.GetTrexModel().Hashrate) / 1000000), 2) + "MH/s";
+            this.AvgHourLabelInfo.Text = Math.Round(((decimal)int.Parse(TrexConnection.GetTrexModel().Hashrate_hour) / 1000000), 2) + "MH/s";
+            this.AvgDayLabelInfo.Text = Math.Round(((decimal)int.Parse(TrexConnection.GetTrexModel().Hashrate_day) / 1000000), 2) + "MH/s";
+            this.AcceptedCountLabelInfo.Text = Math.Round((100 - (((decimal) int.Parse(TrexConnection.GetTrexModel().Rejected_count) / int.Parse(TrexConnection.GetTrexModel().Accepted_count)) * 100)), 2) + "%";
         }
     }
 }

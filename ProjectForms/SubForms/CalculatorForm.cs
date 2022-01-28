@@ -24,9 +24,18 @@ namespace ProjectForms
         }
 
         private void Calculate_Click(object sender, EventArgs e)
-        {
+        {   
+            //Zaraz
+            int hashrate = 0;
+            try
+            {
+                hashrate = int.Parse(TextBoxHashrate.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Je", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
-            int hashrate = int.Parse(TextBoxHashrate.Text);
             WebClient client = new WebClient();
 
             switch (CBCoins.SelectedItem.ToString())

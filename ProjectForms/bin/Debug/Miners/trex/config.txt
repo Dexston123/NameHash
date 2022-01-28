@@ -1,0 +1,13 @@
+{
+  "algo": ethash,
+  "apibindhttp": http://127.0.0.1:4067/,
+  "coin": etherum,
+  "intensity": "auto",
+  "lowload": false,
+  "pool": {
+    "user": "3DLhdwjsB1SnR6McVeVM9KJjGf8StxEi6w.Komp",
+    "url": "stratum+tcp://daggerhashimoto.eu.nicehash.com:3353",
+    "pass": "x",
+    "worker": "PC"
+  }
+}
